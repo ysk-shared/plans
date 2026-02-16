@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>沖縄・座間味 旅行プラン（6/26–6/29）</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111b2e;
+      --txt:#eef3ff;
+      --muted:#b8c3e6;
+      --border: rgba(255,255,255,.10);
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --a:#6ee7ff;
+      --b:#a78bfa;
+      --ok:#34d399;
+      --warn:#fbbf24;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 600px at 20% 0%, rgba(110,231,255,.18), transparent 55%),
+        radial-gradient(900px 500px at 90% 10%, rgba(167,139,250,.20), transparent 55%),
+        var(--bg);
+      color:var(--txt);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Hiragino Kaku Gothic ProN","Noto Sans JP","Segoe UI", sans-serif;
+    }
+    .wrap{max-width:1100px; margin:0 auto; padding:28px 18px 80px;}
+    .hero{
+      border:1px solid var(--border);
+      border-radius:22px;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      padding:22px;
+    }
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px; border-radius:999px;
+      background: rgba(110,231,255,.10);
+      border:1px solid rgba(110,231,255,.22);
+      font-weight:800;
+      font-size:13px;
+    }
+    h1{margin:14px 0 0; font-size:34px}
+    p{margin:10px 0 0; color:var(--muted); line-height:1.65}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px}
+    .card{
+      border:1px solid var(--border);
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(17,27,46,.85), rgba(15,26,44,.75));
+      padding:16px;
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      font-size:12px;
+      font-weight:800;
+      color:var(--txt);
+      white-space:nowrap;
+    }
+    .badge.ok{border-color: rgba(52,211,153,.35); background: rgba(52,211,153,.10)}
+    .badge.warn{border-color: rgba(251,191,36,.35); background: rgba(251,191,36,.10)}
+    .badge.a{border-color: rgba(110,231,255,.35); background: rgba(110,231,255,.10)}
+    .badge.b{border-color: rgba(167,139,250,.35); background: rgba(167,139,250,.12)}
+    ul{margin:10px 0 0 18px; color:var(--muted); line-height:1.65}
+    li{margin:6px 0}
+    .section{
+      margin-top:18px;
+      border:1px solid var(--border);
+      border-radius:22px;
+      background: rgba(255,255,255,.03);
+      padding:18px;
+    }
+    .secHead{
+      display:flex; gap:10px; align-items:baseline; justify-content:space-between;
+      margin-bottom:10px;
+    }
+    .secHead h2{margin:0; font-size:22px}
+    .page{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      color: rgba(238,243,255,.70);
+      font-size:12px;
+    }
+    table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      border-radius:14px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+    }
+    th, td{
+      padding:12px;
+      border-bottom:1px solid var(--border);
+      text-align:left;
+      vertical-align:top;
+      font-size:14px;
+    }
+    th{background: rgba(255,255,255,.04); font-weight:900}
+    tr:last-child td{border-bottom:none}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace}
+    .note{margin-top:10px; font-size:13px; color:rgba(238,243,255,.78)}
+    .divider{height:1px; background:var(--border); margin:12px 0}
+    /* timeline */
+    .tl-grid{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:8px;
+      margin-top:12px;
+    }
+    .tl-day{display:flex; flex-direction:column; gap:6px}
+    .tl-head{
+      text-align:center; font-weight:900; font-size:13px;
+      padding:10px 6px; border-radius:10px;
+      background:rgba(255,255,255,.06);
+      border:1px solid var(--border);
+      line-height:1.4;
+    }
+    .tl-head small{font-weight:600; color:var(--muted); font-size:11px}
+    .tl-ev{
+      padding:8px 10px; border-radius:10px;
+      border:1px solid var(--border);
+      font-size:12px; line-height:1.55;
+      flex:0 0 auto;
+    }
+    .tl-t{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size:11px; font-weight:800; margin-bottom:3px; opacity:.85;
+    }
+    .tl-ev.mv{border-color:rgba(110,231,255,.30); background:rgba(110,231,255,.07)}
+    .tl-ev.sea{border-color:rgba(52,211,153,.30); background:rgba(52,211,153,.07)}
+    .tl-ev.fun{border-color:rgba(167,139,250,.30); background:rgba(167,139,250,.07)}
+    .tl-ev.rest{border-color:rgba(251,191,36,.25); background:rgba(251,191,36,.06)}
+    .tl-ev.free{border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.03)}
+    .ferry-highlight{background:rgba(110,231,255,.06); border:1px solid rgba(110,231,255,.20); border-radius:10px; padding:10px 12px; margin-top:10px; font-size:13px}
+    @media (max-width: 820px){
+      .grid{grid-template-columns:1fr}
+      .tl-grid{grid-template-columns:1fr 1fr}
+      h1{font-size:28px}
+    }
+    @media (max-width: 500px){
+      .tl-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="kicker">🏝️ 沖縄・座間味（6/26–6/29）</div>
+      <h1>旅行プラン比較（A / B）＋固定費の目安</h1>
+      <p>
+        目的：<b>座間味で海を満喫</b>／5人（男3・女2）<br/>
+        固定費 = <b>宿</b> + <b>船(往復)</b> + <b>マリンアクティビティ</b>（飲食・酒などは除外）
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="badge ok">含める（固定費）</div>
+          <ul>
+            <li>🚢 船（那覇⇄座間味 往復）</li>
+            <li>🏨 宿（那覇 or 島）</li>
+            <li>🐢 マリンアクティビティ</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="badge warn">含めない（変動費）</div>
+          <ul>
+            <li>✈️ 航空券（支払い済）</li>
+            <li>🍺 飲食・酒／🛍 お土産／🚕 市内移動</li>
+            <li>追加アクティビティ／レンタル等</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="grid">
+        <div class="card">
+          <div class="badge">フライト（確定）</div>
+          <ul>
+            <li><b>6/26（金）</b> HND 06:40 → OKA 09:20</li>
+            <li><b>6/29（月）</b> OKA 18:30 → HND</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="badge">マリンアクティビティ</div>
+          <ul>
+            <li>ボートツアー／シュノーケル／体験ダイビング etc</li>
+            <li>詳細は後半スライドで比較</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== なぜ座間味？ ===== -->
+
+    <section class="section" id="s0">
+      <div class="secHead">
+        <h2>① 離島えらび：渡嘉敷 vs 座間味</h2>
+        <div class="page">1 / 11</div>
+      </div>
+      <p style="margin-bottom:14px;">
+        沖縄の離島（慶良間諸島）で候補になったのが<b>渡嘉敷島</b>と<b>座間味島</b>。<br/>
+        どちらも那覇・泊港からフェリーで行ける離島で、海のきれいさは互角。<br/>
+        今回は <b>5人（男3・女2）</b> のグループ旅行という前提で比較しました。
+      </p>
+      <table>
+        <tr>
+          <th style="width:140px;"></th>
+          <th>渡嘉敷島</th>
+          <th>座間味島</th>
+        </tr>
+        <tr>
+          <td><b>那覇からの距離</b></td>
+          <td>高速船 約35分</td>
+          <td>高速船 約50分</td>
+        </tr>
+        <tr>
+          <td><b>ビーチ</b></td>
+          <td>阿波連ビーチ（大きめ・開放的）、とかしくビーチ（穴場）</td>
+          <td>古座間味ビーチ（透明度抜群）、阿真ビーチ（穏やか）</td>
+        </tr>
+        <tr>
+          <td><b>ウミガメ</b></td>
+          <td>とかしくビーチで遭遇率◎</td>
+          <td>阿真ビーチで遭遇率◎</td>
+        </tr>
+        <tr>
+          <td><b>海の透明度</b></td>
+          <td><b>ケラマブルー</b>（互角）</td>
+          <td><b>ケラマブルー</b>（互角）</td>
+        </tr>
+        <tr>
+          <td><b>飲食店の数</b></td>
+          <td>少なめ（集落が小さい）</td>
+          <td><b>比較的充実</b>（居酒屋・食堂が複数あり）</td>
+        </tr>
+        <tr>
+          <td><b>宿の選択肢</b></td>
+          <td>民宿中心</td>
+          <td>民宿〜コテージまで幅広い</td>
+        </tr>
+        <tr>
+          <td><b>ツアー・ショップ</b></td>
+          <td>少なめ</td>
+          <td>ダイビング/シュノーケルショップが多い</td>
+        </tr>
+        <tr>
+          <td><b>雰囲気</b></td>
+          <td>静か・自然をじっくり楽しむ向き</td>
+          <td>観光寄り・グループでも楽しみやすい</td>
+        </tr>
+        <tr>
+          <td><b>夜の過ごし方</b></td>
+          <td>早めに静かになる</td>
+          <td>居酒屋で島の夜を楽しめる</td>
+        </tr>
+      </table>
+      <div class="card" style="margin-top:14px;">
+        <div class="badge ok">結論 → 座間味に決定</div>
+        <p>
+          海のきれいさ・ウミガメ遭遇率はどちらも同レベル。大きな違いは<b>島の雰囲気</b>。
+          渡嘉敷は静かで自然をじっくり楽しむ向き、座間味は飲食店やショップが充実していてグループ向き。<br/>
+          今回は<b>5人の男女混合グループ</b>なので、夜ごはんの選択肢が多く
+          ツアーショップも充実している<b>座間味</b>のほうが全員が楽しめると判断しました。
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== 選択肢：何する？どこ泊まる？ ===== -->
+
+    <section class="section" id="marine">
+      <div class="secHead">
+        <h2>② マリンアクティビティ</h2>
+        <div class="page">2 / 11</div>
+      </div>
+      <p style="margin-bottom:12px;">
+        座間味島で楽しめるアクティビティの選択肢（<b>すべて1人あたり・器材レンタル込</b>）。
+      </p>
+      <table>
+        <tr><th>アクティビティ</th><th>料金/人</th><th>所要時間</th><th>備考</th></tr>
+        <tr><td>ビーチシュノーケル</td><td class="mono">無料〜</td><td>自由</td><td>ビーチから直接。レンタルのみ別途</td></tr>
+        <tr><td>ボートシュノーケル（半日）</td><td class="mono">8,800円</td><td>約2時間</td><td>ガイド付き・2ポイント巡り</td></tr>
+        <tr style="background:rgba(52,211,153,.06)"><td><b>1日ボートツアー</b></td><td class="mono"><b>12,000〜14,000円</b></td><td><b>約6時間</b></td><td><b>複数ポイント＋無人島 ★おすすめ</b></td></tr>
+        <tr><td>体験ダイビング（1ダイブ）</td><td class="mono">14,300〜16,500円</td><td>約1.5時間</td><td>ライセンス不要。2名以上で14,300円</td></tr>
+        <tr><td>SUP（半日）</td><td class="mono">6,000〜8,000円</td><td>約2時間</td><td>ビーチ発。ツアーに含まれる場合も</td></tr>
+        <tr><td>ファンダイビング（2ダイブ）</td><td class="mono">14,300円</td><td>約3時間</td><td>要ライセンス</td></tr>
+      </table>
+
+      <div class="card" style="margin-top:14px;">
+        <div class="badge ok">結論 → 1日ボートツアーがおすすめ</div>
+        <ul>
+          <li>ボートで<b>複数のシュノーケルポイント</b>を効率よく回れる（ビーチからでは行けない場所）</li>
+          <li><b>無人島上陸</b>やウミガメ遭遇率の高いポイントにも行ける</li>
+          <li>5人グループでもOK。希望者は<b>体験ダイビングを別途追加</b>できる</li>
+          <li>半日だと物足りない＆単品を複数予約するより1日ツアーのほうがコスパ◎</li>
+        </ul>
+      </div>
+      <p class="note">※上記はピース座間味・カイトマリンスポーツ等の実勢価格（2026年2月時点）。</p>
+    </section>
+
+    <section class="section" id="s5">
+      <div class="secHead">
+        <h2>③ 1日ボートツアー（イメージ）</h2>
+        <div class="page">3 / 11</div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="badge ok">当日の流れ（例）</div>
+          <ul>
+            <li>午前：ポイント① シュノーケル／ウミガメ狙い</li>
+            <li>昼：無人島 or 船上休憩</li>
+            <li>午後：ポイント②〜③（希望者は体験ダイビング追加）</li>
+            <li>夕方：帰港 → シャワー → 夜ごはん</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="badge ok">持ち物（最低限）</div>
+          <ul>
+            <li>日焼け対策、ラッシュガード</li>
+            <li>酔い止め、水</li>
+          </ul>
+          <p class="note">※天候・海況でポイントは当日判断。</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="card">
+        <div class="badge">1人あたりの料金（器材レンタル込）</div>
+        <table>
+          <tr><th></th><th>料金/人</th></tr>
+          <tr>
+            <td><b>ボートツアー基本料金</b><br/><small style="color:var(--muted)">シュノーケル複数ポイント＋無人島＋ガイド</small></td>
+            <td class="mono"><b>約12,000円</b></td>
+          </tr>
+          <tr>
+            <td><b>＋体験ダイビング追加（希望者のみ）</b><br/><small style="color:var(--muted)">ライセンス不要・器材込。ツアー中に1ダイブ体験</small></td>
+            <td class="mono"><b>+約5,000〜6,000円</b></td>
+          </tr>
+          <tr style="background:rgba(52,211,153,.06)">
+            <td><b>ダイビングもやる場合の合計</b></td>
+            <td class="mono"><b>約17,000〜18,000円</b></td>
+          </tr>
+        </table>
+        <p class="note">
+          ※体験ダイビングを単独で予約すると14,300円/人（2名以上）なので、ツアーに追加するほうがお得。<br/>
+          ※ウェットスーツのみ別途の場合あり（+1,100円程度）。
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="accommodation">
+      <div class="secHead">
+        <h2>④ 宿タイプ比較</h2>
+        <div class="page">4 / 11</div>
+      </div>
+      <p style="margin-bottom:12px;">
+        座間味島の宿は大きく3タイプ。<b>5人（男3・女2）→ 2部屋</b>が基本になります。
+      </p>
+      <table>
+        <tr>
+          <th style="width:100px;"></th>
+          <th>民宿</th>
+          <th>ペンション・コテージ</th>
+          <th>コンドミニアム・ホテル</th>
+        </tr>
+        <tr>
+          <td><b>料金/人泊</b></td>
+          <td class="mono">6,000〜7,000円</td>
+          <td class="mono">8,000〜10,000円</td>
+          <td class="mono">10,000〜13,000円</td>
+        </tr>
+        <tr>
+          <td><b>食事</b></td>
+          <td>朝夕食付が基本</td>
+          <td>素泊まり or 朝食付</td>
+          <td>素泊まり〜朝食付</td>
+        </tr>
+        <tr>
+          <td><b>部屋</b></td>
+          <td>和室（襖仕切り）</td>
+          <td>洋室 or コテージ</td>
+          <td>洋室・キッチン付もあり</td>
+        </tr>
+        <tr>
+          <td><b>プライバシー</b></td>
+          <td>△ 共用スペース多め</td>
+          <td>○ 部屋ごとに独立</td>
+          <td>◎ 完全個室</td>
+        </tr>
+        <tr>
+          <td><b>設備</b></td>
+          <td>最低限（バストイレ共用も）</td>
+          <td>バストイレ付が多い</td>
+          <td>バストイレ・冷蔵庫・洗濯機</td>
+        </tr>
+        <tr>
+          <td><b>雰囲気</b></td>
+          <td>島のアットホーム感◎<br/>他の旅行者との交流も</td>
+          <td>カジュアルで清潔<br/>グループ向き</td>
+          <td>快適・自由度が高い<br/>自炊も可能</td>
+        </tr>
+        <tr>
+          <td><b>5人での向き</b></td>
+          <td>コスパ最強<br/>食事の心配なし</td>
+          <td>バランス型<br/>男女で部屋を分けやすい</td>
+          <td>快適重視<br/>自分たちのペースで過ごせる</td>
+        </tr>
+      </table>
+      <div class="card" style="margin-top:14px;">
+        <div class="badge warn">結論 → みんなで相談して決めたい</div>
+        <p>
+          コスパ重視なら<b>民宿</b>、バランス重視なら<b>ペンション・コテージ</b>、快適重視なら<b>コンドミニアム・ホテル</b>。<br/>
+          予算感と好みを共有して決めましょう。
+        </p>
+      </div>
+      <p class="note">
+        ※料金は1人1泊あたりの目安（2名以上利用時）。時期・施設で異なります。<br/>
+        ※民宿は朝夕食付の料金。ペンション以上は素泊まり基準のため、外食代が別途かかります。<br/>
+        ※男3・女2の場合、2部屋（男部屋・女部屋）になる想定。
+      </p>
+    </section>
+
+    <!-- ===== 計画：いつ・どうやって？ ===== -->
+
+    <section class="section" id="ferry">
+      <div class="secHead">
+        <h2>⑤ 船の運航ダイヤ（泊港 ⇄ 座間味）</h2>
+        <div class="page">5 / 11</div>
+      </div>
+      <p style="margin-bottom:12px;">
+        <span class="badge warn" style="font-size:11px;">2026年2月時点のダイヤ｜6月は変更の可能性あり</span>
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="badge a">行き：泊港 → 座間味</div>
+          <table>
+            <tr><th>便</th><th>泊港 発</th><th>座間味 着</th><th>所要</th></tr>
+            <tr><td><b>高速船 1便</b></td><td class="mono">09:00</td><td class="mono">10:10</td><td>約70分</td></tr>
+            <tr><td><b>フェリー</b></td><td class="mono">10:00</td><td class="mono">12:00</td><td>約120分</td></tr>
+            <tr><td><b>高速船 2便</b></td><td class="mono">15:00</td><td class="mono">16:10</td><td>約70分</td></tr>
+          </table>
+          <p class="note">※高速船は阿嘉島経由（直行便は約50分）</p>
+        </div>
+        <div class="card">
+          <div class="badge a">帰り：座間味 → 泊港</div>
+          <table>
+            <tr><th>便</th><th>座間味 発</th><th>泊港 着</th><th>所要</th></tr>
+            <tr><td><b>高速船 1便</b></td><td class="mono">10:20</td><td class="mono">11:10</td><td>約50分</td></tr>
+            <tr><td><b>フェリー</b></td><td class="mono">14:00</td><td class="mono">16:00</td><td>約120分</td></tr>
+            <tr><td><b>高速船 2便</b></td><td class="mono">16:20</td><td class="mono">17:10</td><td>約50分</td></tr>
+          </table>
+          <p class="note">※帰りの高速船は直行</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="card">
+        <div class="badge">料金（大人1人）</div>
+        <table>
+          <tr><th>船</th><th>片道</th><th>往復</th></tr>
+          <tr><td><b>フェリーざまみ</b></td><td class="mono">2,150円</td><td class="mono">4,090円</td></tr>
+          <tr><td><b>高速船クイーンざまみ</b></td><td class="mono">3,200円</td><td class="mono">6,080円</td></tr>
+        </table>
+        <p class="note">※別途 環境協力税 100円/人（往復）。予約は乗船1ヶ月前〜前日（TEL: 098-868-4567 / WEB予約可）。</p>
+      </div>
+
+      <div class="ferry-highlight">
+        <b>⚠️ パターンBの注意点：</b>フライトが OKA 09:20着 のため、09:00の高速船には間に合いません。
+        10:00のフェリーも空港→泊港の移動時間を考えると非常にタイト。
+        <b>夏ダイヤで増便がなければ、15:00の高速船2便まで待つ必要があります。</b>
+        那覇で昼食を取りつつ待つプランになります。
+      </div>
+
+      <div class="card" style="margin-top:10px;">
+        <div class="badge">島内の移動手段</div>
+        <ul>
+          <li><b>徒歩</b>：港〜集落は徒歩圏内。古座間味ビーチまで徒歩約15〜20分</li>
+          <li><b>レンタサイクル</b>：1日 約1,000〜1,500円。島内の移動に便利</li>
+          <li><b>レンタバイク / カート</b>：1日 約3,000〜5,000円。阿真ビーチ方面へ行くなら楽</li>
+          <li><b>宿の送迎</b>：港への送迎をしてくれる宿が多い</li>
+        </ul>
+        <p class="note">※座間味島は小さいのでレンタカーは不要。自転車があれば十分。</p>
+      </div>
+    </section>
+
+    <section class="section" id="s1">
+      <div class="secHead">
+        <h2>⑥ パターン概要</h2>
+        <div class="page">6 / 11</div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="badge a">パターンA</div>
+          <p>初日那覇泊 → 2日目から島入り</p>
+          <ul>
+            <li>初日ゆっくり／那覇でごはん・飲み可</li>
+            <li>飛行機遅延の不安が減る</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="badge b">パターンB</div>
+          <p>初日から島入り（到着日は泊まるだけ）</p>
+          <ul>
+            <li>海の滞在時間が最大</li>
+            <li>移動回数が少ない</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="s2">
+      <div class="secHead">
+        <h2>⑦ タイムライン</h2>
+        <div class="page">7 / 11</div>
+      </div>
+
+      <!-- Pattern A -->
+      <div class="badge a" style="margin-bottom:8px">パターンA：那覇1泊 ＋ 島2泊</div>
+      <div class="tl-grid">
+        <div class="tl-day">
+          <div class="tl-head">Day1<br/><small>6/26（金）</small></div>
+          <div class="tl-ev mv">
+            <div class="tl-t">06:40 → 09:20</div>
+            ✈️ HND → OKA
+          </div>
+          <div class="tl-ev fun">
+            <div class="tl-t">10:00〜</div>
+            🏙️ 那覇市内散策<br/>国際通り・牧志公設市場 etc
+          </div>
+          <div class="tl-ev rest">
+            <div class="tl-t">夜</div>
+            🍺 那覇で夕食＆飲み<br/>🏨 那覇泊
+          </div>
+        </div>
+        <div class="tl-day">
+          <div class="tl-head">Day2<br/><small>6/27（土）</small></div>
+          <div class="tl-ev mv">
+            <div class="tl-t">09:00 → 10:10</div>
+            🚢 泊港 → 座間味<br/><small>高速船1便</small>
+          </div>
+          <div class="tl-ev sea">
+            <div class="tl-t">11:00〜</div>
+            🏖️ 古座間味ビーチ<br/>島散策・チェックイン
+          </div>
+          <div class="tl-ev rest">
+            <div class="tl-t">夜</div>
+            🍻 島の居酒屋で夕食<br/>🏨 島泊①
+          </div>
+        </div>
+        <div class="tl-day">
+          <div class="tl-head">Day3<br/><small>6/28（日）</small></div>
+          <div class="tl-ev sea" style="flex:1">
+            <div class="tl-t">09:00〜17:00</div>
+            🐢 <b>1日ボートツアー</b><br/>
+            シュノーケル／ウミガメ<br/>無人島／体験ダイビング
+          </div>
+          <div class="tl-ev rest">
+            <div class="tl-t">夜</div>
+            🍻 島で打ち上げ夕食<br/>🏨 島泊②
+          </div>
+        </div>
+        <div class="tl-day">
+          <div class="tl-head">Day4<br/><small>6/29（月）</small></div>
+          <div class="tl-ev mv">
+            <div class="tl-t">10:20 → 11:10</div>
+            🚢 座間味 → 泊港<br/><small>高速船1便</small>
+          </div>
+          <div class="tl-ev fun">
+            <div class="tl-t">12:00〜</div>
+            🛍️ 那覇でランチ＆お土産
+          </div>
+          <div class="tl-ev mv">
+            <div class="tl-t">18:30</div>
+            ✈️ OKA → HND
+          </div>
+        </div>
+      </div>
+
+      <div class="divider" style="margin:18px 0"></div>
+
+      <!-- Pattern B -->
+      <div class="badge b" style="margin-bottom:8px">パターンB：島3泊（初日入り）</div>
+      <div class="tl-grid">
+        <div class="tl-day">
+          <div class="tl-head">Day1<br/><small>6/26（金）</small></div>
+          <div class="tl-ev mv">
+            <div class="tl-t">06:40 → 09:20</div>
+            ✈️ HND → OKA
+          </div>
+          <div class="tl-ev fun">
+            <div class="tl-t">10:00〜14:00</div>
+            🏙️ 泊港周辺でランチ<br/><small>15:00の船まで待機</small>
+          </div>
+          <div class="tl-ev mv">
+            <div class="tl-t">15:00 → 16:10</div>
+            🚢 泊港 → 座間味<br/><small>高速船2便</small>
+          </div>
+          <div class="tl-ev rest">
+            <div class="tl-t">夜</div>
+            🍻 島で夕食<br/>🏨 島泊①
+          </div>
+        </div>
+        <div class="tl-day">
+          <div class="tl-head">Day2<br/><small>6/27（土）</small></div>
+          <div class="tl-ev sea" style="flex:1">
+            <div class="tl-t">09:00〜17:00</div>
+            🐢 <b>1日ボートツアー</b><br/>
+            シュノーケル／ウミガメ<br/>無人島／体験ダイビング
+          </div>
+          <div class="tl-ev rest">
+            <div class="tl-t">夜</div>
+            🍻 島で夕食<br/>🏨 島泊②
+          </div>
+        </div>
+        <div class="tl-day">
+          <div class="tl-head">Day3<br/><small>6/28（日）</small></div>
+          <div class="tl-ev free" style="flex:1">
+            <div class="tl-t">終日フリー</div>
+            🏖️ ビーチ / SUP / 散策<br/>
+            <small>ツアー予備日にもなる<br/>（天候で Day2↔Day3 入替可）</small>
+          </div>
+          <div class="tl-ev rest">
+            <div class="tl-t">夜</div>
+            🍻 島で最後の夕食<br/>🏨 島泊③
+          </div>
+        </div>
+        <div class="tl-day">
+          <div class="tl-head">Day4<br/><small>6/29（月）</small></div>
+          <div class="tl-ev mv">
+            <div class="tl-t">10:20 → 11:10</div>
+            🚢 座間味 → 泊港<br/><small>高速船1便</small>
+          </div>
+          <div class="tl-ev fun">
+            <div class="tl-t">12:00〜</div>
+            🛍️ 那覇でランチ＆お土産
+          </div>
+          <div class="tl-ev mv">
+            <div class="tl-t">18:30</div>
+            ✈️ OKA → HND
+          </div>
+        </div>
+      </div>
+
+      <p class="note">
+        ※時刻は2026年2月時点のダイヤを参考にしたイメージです。6月の夏ダイヤでは増便の可能性あり。<br/>
+        ※パターンBのDay1は、夏ダイヤで昼便（13:00頃）が増便されれば到着が早まります。
+      </p>
+    </section>
+
+    <!-- ===== 費用 ===== -->
+
+    <section class="section" id="s4">
+      <div class="secHead">
+        <h2>⑧ 内訳（標準サンプル）</h2>
+        <div class="page">8 / 11</div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="badge a">A：標準（例）</div>
+          <table>
+            <tr><th>項目</th><th>目安</th></tr>
+            <tr><td>那覇ホテル 1泊</td><td class="mono">10,000</td></tr>
+            <tr><td>島宿 2泊</td><td class="mono">26,000</td></tr>
+            <tr><td>船 往復</td><td class="mono">6,000</td></tr>
+            <tr><td>ボートツアー＋体験ダイビング</td><td class="mono">17,000</td></tr>
+            <tr><td><b>合計</b></td><td class="mono"><b>59,000</b></td></tr>
+          </table>
+        </div>
+        <div class="card">
+          <div class="badge b">B：標準（例）</div>
+          <table>
+            <tr><th>項目</th><th>目安</th></tr>
+            <tr><td>島宿 3泊</td><td class="mono">39,000</td></tr>
+            <tr><td>船 往復</td><td class="mono">6,000</td></tr>
+            <tr><td>ボートツアー＋体験ダイビング</td><td class="mono">17,000</td></tr>
+            <tr><td><b>合計</b></td><td class="mono"><b>62,000</b></td></tr>
+          </table>
+        </div>
+      </div>
+      <p class="note">※ダイビングしない場合は −5,000〜6,000円/人。実際は部屋割り（2部屋になる等）で上下。</p>
+    </section>
+
+    <!-- ===== 季節リスク ===== -->
+
+    <section class="section" id="season-risk">
+      <div class="secHead">
+        <h2>⑨ 季節リスク＆天候対策</h2>
+        <div class="page">9 / 11</div>
+      </div>
+      <p style="margin-bottom:12px;">
+        <b>6月下旬の沖縄</b>は梅雨明け直後〜台風シーズンの入り口。メリットもリスクもある時期です。
+      </p>
+      <div class="grid">
+        <div class="card">
+          <div class="badge ok">メリット</div>
+          <ul>
+            <li>例年6月中旬〜下旬に<b>梅雨明け</b> → 晴天率が高い</li>
+            <li>7月のハイシーズン直前で<b>宿・ツアーがやや安い</b></li>
+            <li>海水温が高く<b>マリンアクティビティに最適</b></li>
+            <li>夏休み前で観光客が比較的少ない</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="badge warn">デメリット・リスク</div>
+          <ul>
+            <li>梅雨が長引く年は<b>雨の可能性</b></li>
+            <li><b>台風</b>接近時は高速船・フェリーが欠航</li>
+            <li>欠航すると<b>島に足止め or 島に渡れない</b></li>
+            <li>紫外線が非常に強い（日焼け対策必須）</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" style="margin-top:14px;">
+        <div class="badge b">Plan B（天候悪化時）</div>
+        <ul>
+          <li><b>船が欠航</b> → 那覇滞在を延長し、美ら海水族館・首里城等の屋内観光に切り替え</li>
+          <li><b>雨天</b> → ボートツアーは小雨なら催行（海況次第）。中止時はSUP体験や島カフェ巡りに変更</li>
+          <li><b>台風で帰れない場合</b> → 那覇 or 島で延泊の可能性あり。帰りのフライト変更が必要になることも</li>
+        </ul>
+        <p class="note">※台風情報は出発1週間前から要チェック。接近が確実な場合は日程変更の判断も早めに。</p>
+      </div>
+    </section>
+
+    <!-- ===== 予約スケジュール ===== -->
+
+    <section class="section" id="booking-schedule">
+      <div class="secHead">
+        <h2>⑩ 予約スケジュール＆キャンセルポリシー</h2>
+        <div class="page">10 / 11</div>
+      </div>
+      <p style="margin-bottom:12px;">
+        <b>6/26出発</b>に向けて、いつまでに何を予約すべきかの逆算スケジュールです。
+      </p>
+      <table>
+        <tr><th>時期</th><th>やること</th><th>備考</th></tr>
+        <tr>
+          <td><b>3月中旬</b><br/><small style="color:var(--muted)">3ヶ月前</small></td>
+          <td>宿の予約</td>
+          <td>離島の宿は数が少ないため早めに確保。参加人数をこの時点で確定したい</td>
+        </tr>
+        <tr>
+          <td><b>4月下旬</b><br/><small style="color:var(--muted)">2ヶ月前</small></td>
+          <td>ボートツアー・ダイビング予約</td>
+          <td>人気ショップは夏季の予約が埋まりやすい</td>
+        </tr>
+        <tr>
+          <td><b>5月下旬</b><br/><small style="color:var(--muted)">1ヶ月前</small></td>
+          <td>高速船 / フェリー予約</td>
+          <td>乗船1ヶ月前から受付開始。夏季は満席になることも</td>
+        </tr>
+        <tr>
+          <td><b>6月中旬</b><br/><small style="color:var(--muted)">1〜2週間前</small></td>
+          <td>天気予報・台風情報チェック</td>
+          <td>台風接近の場合は日程変更の判断</td>
+        </tr>
+      </table>
+
+      <div class="divider"></div>
+      <div class="card">
+        <div class="badge warn">キャンセルポリシー（目安）</div>
+        <table>
+          <tr><th>項目</th><th>キャンセル料発生</th><th>備考</th></tr>
+          <tr><td><b>宿泊</b></td><td>3日前〜前日: 50%、当日: 100%</td><td>施設により異なる。要確認</td></tr>
+          <tr><td><b>高速船 / フェリー</b></td><td>出航前なら手数料のみ（数百円）</td><td>欠航時は全額返金</td></tr>
+          <tr><td><b>ボートツアー</b></td><td>前日: 50%、当日: 100%</td><td>天候中止は全額返金</td></tr>
+          <tr><td><b>航空券</b></td><td>—</td><td>支払い済。変更条件は券種による</td></tr>
+        </table>
+      </div>
+      <div class="card" style="margin-top:10px;">
+        <div class="badge">人数変動の影響</div>
+        <ul>
+          <li><b>宿</b>：4人以下になれば1部屋に変更可能な場合も（1人あたり費用が変動）</li>
+          <li><b>ツアー</b>：人数変更は前日まで対応可能な場合が多い</li>
+          <li><b>船</b>：個人予約なので人数変動の影響なし</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== 最終まとめ ===== -->
+
+    <section class="section" id="s3">
+      <div class="secHead">
+        <h2>⑪ 最終まとめ（固定費：1人あたり）</h2>
+        <div class="page">11 / 11</div>
+      </div>
+      <table>
+        <tr>
+          <th style="width:160px;">パターン</th>
+          <th>民宿</th>
+          <th>ペンション・コテージ</th>
+          <th>コンドミニアム・ホテル</th>
+        </tr>
+        <tr>
+          <td><b>A</b><div style="color:var(--muted)">那覇1泊＋島2泊</div></td>
+          <td><b>約4.5万</b></td>
+          <td><b>約6.0万</b></td>
+          <td><b>約8.0万</b></td>
+        </tr>
+        <tr>
+          <td><b>B</b><div style="color:var(--muted)">島3泊（初日入り）</div></td>
+          <td><b>約4.5万</b></td>
+          <td><b>約6.2万</b></td>
+          <td><b>約8.0万</b></td>
+        </tr>
+      </table>
+      <p class="note">
+        ※固定費= <b>宿＋船往復＋ボートツアー（体験ダイビング込）</b>。飲食・酒・お土産・市内移動は含めない。<br/>
+        ※体験ダイビングをしない場合は −5,000〜6,000円/人。<br/>
+        ※AとBが近いのは「那覇1泊」と「島1泊増」が相殺されやすいから。<br/>
+        ※実際は部屋割り（男3・女2 → 2部屋）で上下します。
+      </p>
+    </section>
+  </main>
+</body>
+</html>
