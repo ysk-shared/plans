@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>南房総 旅行プラン【叩き台】（2026年10月）</title>
+  <title>南房総 旅行プラン【叩き台】（10/10〜12）</title>
   <style>
     :root{
       --bg:#0b1220;
@@ -46,7 +46,6 @@
     h1{margin:14px 0 0; font-size:34px}
     p{margin:10px 0 0; color:var(--muted); line-height:1.65}
     .grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px}
-    .grid3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:14px}
     .card{
       border:1px solid var(--border);
       border-radius:18px;
@@ -141,20 +140,36 @@
     .tl-ev.rest{border-color:rgba(251,191,36,.25); background:rgba(251,191,36,.06)}
     .tl-ev.free{border-color:rgba(255,255,255,.12); background:rgba(255,255,255,.03)}
     .highlight-box{background:rgba(251,191,36,.06); border:1px solid rgba(251,191,36,.20); border-radius:10px; padding:10px 12px; margin-top:10px; font-size:13px}
-    .member-tag{
-      display:inline-block; padding:4px 8px; border-radius:6px; font-size:11px; font-weight:700; margin:2px;
+    /* airbnb listing cards */
+    .listing-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:14px}
+    .listing{
+      border:1px solid var(--border);
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(17,27,46,.85), rgba(15,26,44,.75));
+      padding:16px;
+      transition: border-color .2s;
     }
-    .tag-tokyo{background:rgba(110,231,255,.12); border:1px solid rgba(110,231,255,.25); color:var(--a)}
-    .tag-kashiwa{background:rgba(52,211,153,.12); border:1px solid rgba(52,211,153,.25); color:var(--ok)}
-    .tag-nagoya{background:rgba(167,139,250,.12); border:1px solid rgba(167,139,250,.25); color:var(--b)}
+    .listing:hover{border-color: rgba(251,191,36,.4)}
+    .listing h3{margin:0 0 6px; font-size:16px}
+    .listing-meta{display:flex; flex-wrap:wrap; gap:6px; margin:8px 0}
+    .listing-tag{
+      display:inline-block; padding:3px 8px; border-radius:6px; font-size:11px; font-weight:700;
+      background:rgba(255,255,255,.06); border:1px solid var(--border);
+    }
+    .listing-tag.pet{background:rgba(52,211,153,.10); border-color:rgba(52,211,153,.25); color:var(--ok)}
+    .listing-tag.bbq{background:rgba(251,191,36,.10); border-color:rgba(251,191,36,.25); color:var(--warn)}
+    .listing-link{
+      display:inline-block; margin-top:8px; padding:6px 14px; border-radius:8px;
+      background:rgba(251,191,36,.12); border:1px solid rgba(251,191,36,.30);
+      color:var(--warn); text-decoration:none; font-weight:700; font-size:13px;
+      transition: background .2s;
+    }
+    .listing-link:hover{background:rgba(251,191,36,.22)}
     @media (max-width: 820px){
       .grid{grid-template-columns:1fr}
-      .grid3{grid-template-columns:1fr}
+      .listing-grid{grid-template-columns:1fr}
       .tl-grid{grid-template-columns:1fr}
       h1{font-size:28px}
-    }
-    @media (max-width: 500px){
-      .tl-grid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -164,11 +179,11 @@
     <!-- ===== HERO: 旅行概要 ===== -->
 
     <section class="hero">
-      <div class="kicker">🍂 南房総・館山（2026年10月）</div>
+      <div class="kicker">🍂 南房総・館山（10/10〜12 確定）</div>
       <h1>大人数旅行プラン【叩き台】</h1>
       <p>
-        目的：<b>みんなで一棟貸切、自炊＆BBQ＆ゴルフの秋旅</b><br/>
-        12〜13名（男女半々）＋赤ちゃん2名（1歳児）＋犬1匹（かも）／<b>2泊3日</b>
+        <b>一棟貸切で自炊＆BBQ＆ゴルフの秋旅</b><br/>
+        12〜13名（男女半々）＋赤ん坊2〜3名 ＋犬1匹（かも）／<b>2泊3日</b>
       </p>
 
       <div class="grid">
@@ -185,7 +200,7 @@
           <ul>
             <li>🍖 食材・酒（自炊＆BBQ用 / 割り勘）</li>
             <li>🍽️ 道中の外食</li>
-            <li>🛍 お土産 / その他個人出費</li>
+            <li>🛍 お土産 / その他</li>
           </ul>
         </div>
       </div>
@@ -193,79 +208,35 @@
       <div class="divider"></div>
       <div class="grid">
         <div class="card">
-          <div class="badge">メンバー構成</div>
+          <div class="badge">メンバー</div>
           <ul>
             <li><b>大人 12〜13名</b>（男女ほぼ半々）</li>
-            <li><b>赤ちゃん 2名</b>（1歳児）</li>
-            <li><b>犬 1匹</b>（先輩が連れてくるかも）</li>
+            <li><b>赤ん坊 2〜3名</b></li>
+            <li><b>犬 1匹</b>（来るかも）</li>
+            <li>🚬 全員喫煙者 ／ 🍺 全員酒好き</li>
           </ul>
         </div>
         <div class="card">
-          <div class="badge">出発地バラバラ問題</div>
+          <div class="badge">基本スタイル</div>
           <ul>
-            <li><span class="member-tag tag-tokyo">東京組</span> 世田谷・蒲田</li>
-            <li><span class="member-tag tag-kashiwa">柏組</span> 千葉・柏市</li>
-            <li><span class="member-tag tag-nagoya">名古屋組</span> 先輩夫婦＋赤ちゃん＋犬</li>
+            <li>🚗 全員 <b>車移動</b></li>
+            <li>🍳 現地では <b>全食自炊</b>（道中のみ外食）</li>
+            <li>🍖 <b>BBQ＆宴会</b> がメイン</li>
+            <li>⛳ ゴルフ行きたい組は行く</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- ===== ① 日程候補 ===== -->
+    <!-- ===== ① アクセス ===== -->
 
     <section class="section" id="s1">
       <div class="secHead">
-        <h2>① 日程えらび：3連休 vs 別日程</h2>
-        <div class="page">1 / 10</div>
-      </div>
-      <p style="margin-bottom:14px;">
-        2026年10月には <b>3連休（10/10土〜12月・祝）</b> がある。ここに合わせるか、別日程にするかで条件が大きく変わります。
-      </p>
-      <table>
-        <tr>
-          <th style="width:140px;"></th>
-          <th>パターンA：3連休利用<br/><small>10/10(土)〜12(月祝)</small></th>
-          <th>パターンB：別の週末＋有休<br/><small>例: 10/16(金)〜18(日)</small></th>
-        </tr>
-        <tr>
-          <td><b>メリット</b></td>
-          <td>有休不要。全員参加しやすい</td>
-          <td>渋滞が少ない。宿が安い</td>
-        </tr>
-        <tr>
-          <td><b>デメリット</b></td>
-          <td>アクアライン大渋滞。宿が高め</td>
-          <td>金曜に有休が必要（1日）</td>
-        </tr>
-        <tr>
-          <td><b>アクアライン渋滞</b></td>
-          <td>行き: 1〜2時間増 / 帰り: 2〜3時間増</td>
-          <td>比較的スムーズ</td>
-        </tr>
-        <tr>
-          <td><b>Airbnb料金</b></td>
-          <td>ハイシーズン価格（1.3〜1.5倍）</td>
-          <td>通常〜やや安め</td>
-        </tr>
-      </table>
-      <div class="card" style="margin-top:14px;">
-        <div class="badge warn">結論 → みんなで相談して決めたい</div>
-        <p>
-          全員のスケジュールが合うなら <b>有休1日取って3連休を外す</b> のがコスパ・渋滞の両面でおすすめ。
-          ただし12〜13人の有休調整は現実的に難しい可能性もある。<b>早めにメンバーの都合を確認</b>したい。
-        </p>
-      </div>
-    </section>
-
-    <!-- ===== ② アクセス ===== -->
-
-    <section class="section" id="s2">
-      <div class="secHead">
-        <h2>② アクセス（各拠点 → 南房総）</h2>
-        <div class="page">2 / 10</div>
+        <h2>① アクセス（車ルート）</h2>
+        <div class="page">1 / 9</div>
       </div>
       <p style="margin-bottom:12px;">
-        全員車移動。出発地がバラバラなので、<b>合流ポイント</b>を決めて現地に向かいます。
+        全員車移動。出発地がバラバラなので <b>合流ポイント</b> を決めて現地へ。
       </p>
       <table>
         <tr>
@@ -276,32 +247,25 @@
           <th>高速代(ETC)</th>
         </tr>
         <tr>
-          <td><span class="member-tag tag-tokyo">世田谷</span></td>
+          <td><b>世田谷</b></td>
           <td>用賀IC → 首都高湾岸線 → アクアライン → 館山道</td>
           <td class="mono">約110km</td>
           <td class="mono">約1.5〜2h</td>
           <td class="mono">約3,000〜3,500円</td>
         </tr>
         <tr>
-          <td><span class="member-tag tag-tokyo">蒲田</span></td>
+          <td><b>蒲田</b></td>
           <td>空港中央IC → 首都高湾岸線 → アクアライン → 館山道</td>
           <td class="mono">約100km</td>
           <td class="mono">約1.5h</td>
           <td class="mono">約2,500〜3,000円</td>
         </tr>
         <tr>
-          <td><span class="member-tag tag-kashiwa">柏</span></td>
+          <td><b>柏</b></td>
           <td>柏IC(常磐道) → 京葉道路 → 館山道<br/><small>※アクアライン経由も可</small></td>
           <td class="mono">約130〜160km</td>
           <td class="mono">約2〜2.5h</td>
           <td class="mono">約3,500〜4,500円</td>
-        </tr>
-        <tr>
-          <td><span class="member-tag tag-nagoya">名古屋</span></td>
-          <td>名古屋IC → 新東名 → 圏央道 → 木更津JCT → 館山道<br/><small>※都心を通らないルート推奨</small></td>
-          <td class="mono">約430〜460km</td>
-          <td class="mono">約4.5〜5.5h</td>
-          <td class="mono">約6,000〜7,000円<br/><small>(休日ETC割引)</small></td>
         </tr>
       </table>
 
@@ -309,119 +273,329 @@
       <div class="card">
         <div class="badge a">合流プラン</div>
         <ul>
-          <li><b>① 東京組</b>（世田谷・蒲田） → <b>海ほたるPA</b> で合流</li>
-          <li><b>② 名古屋組</b> → 圏央道経由で <b>木更津JCT</b> へ → 東京組と合流</li>
-          <li><b>③ 柏組</b> → 京葉道路〜館山道で南下 → <b>市原SA</b> or <b>君津PA</b> で全員合流</li>
-          <li>全員揃ったら <b>館山方面のスーパーで買い出し</b> → 宿へ</li>
+          <li><b>東京組</b>（世田谷・蒲田）→ <b>海ほたるPA</b> で合流</li>
+          <li><b>柏組</b> → 京葉道路〜館山道で南下 → <b>市原SA</b> or <b>君津PA</b> で全員合流</li>
+          <li>全員揃ったら <b>館山方面で買い出し</b> → 宿へ</li>
         </ul>
       </div>
 
       <div class="highlight-box">
-        <b>⚠️ 渋滞対策：</b>3連休の場合、行きは<b>朝6時台</b>にアクアラインを通過するのが理想。
-        帰りは<b>14時まで</b>に乗るか、<b>20時以降</b>に遅らせないと2〜3時間の渋滞にはまります。
-        柏組は京葉道路の渋滞にも注意。<b>早朝出発が鉄則</b>。
+        <b>⚠️ 3連休の渋滞注意：</b>10月の3連休はアクアラインが激混み。
+        行きは<b>朝6時台</b>にアクアライン通過が理想。
+        帰りは<b>14時まで</b>に乗るか<b>20時以降</b>にしないと2〜3時間はまる。
+        柏組は京葉道路の渋滞にも注意。<b>とにかく早朝出発</b>。
       </div>
 
       <p class="note">
-        ※アクアラインETC料金は通常3,140円 → <b>ETC利用で800円</b>（2025年時点の割引。継続確認要）。<br/>
-        ※名古屋組の高速代はETC休日割引（30%OFF）適用想定。<br/>
-        ※所要時間は渋滞なしの目安。土日は+30分〜2時間を見込む。
+        ※アクアラインETC料金: 通常3,140円 → <b>ETC利用で800円</b>（2025年時点の割引。継続確認要）。<br/>
+        ※所要時間は渋滞なしの目安。3連休は+1〜2時間を見込む。
       </p>
     </section>
 
-    <!-- ===== ③ 宿泊（Airbnb） ===== -->
+    <!-- ===== ② 宿泊（Airbnb候補） ===== -->
 
-    <section class="section" id="s3">
+    <section class="section" id="s2">
       <div class="secHead">
-        <h2>③ 宿泊：Airbnb 一棟貸し</h2>
-        <div class="page">3 / 10</div>
+        <h2>② 宿泊：Airbnb 一棟貸し</h2>
+        <div class="page">2 / 9</div>
       </div>
       <p style="margin-bottom:12px;">
-        12〜13人＋赤ちゃん2人＋犬で泊まれる <b>一棟貸し物件</b> をAirbnbで探します。<br/>
-        以下が物件選びの<b>必須条件と優先条件</b>です。
+        12〜13人＋赤ん坊＋犬で泊まれる <b>一棟貸し</b> をAirbnbで探す。
       </p>
       <div class="grid">
         <div class="card">
           <div class="badge danger">必須条件</div>
           <ul>
-            <li>収容人数 <b>13名以上</b></li>
+            <li>収容 <b>13名以上</b></li>
             <li><b>ペット可</b>（犬が来る場合）</li>
-            <li>駐車場 <b>3〜4台分</b>（最低）</li>
+            <li>駐車場 <b>3〜4台分</b></li>
             <li>キッチン・調理器具あり（<b>自炊前提</b>）</li>
-            <li>バス・トイレ <b>2箇所以上</b>（大人数のため）</li>
+            <li>トイレ <b>2箇所以上</b></li>
+            <li>🚬 <b>喫煙OK</b>（もしくは屋外喫煙スペース）</li>
           </ul>
         </div>
         <div class="card">
-          <div class="badge ok">あると嬉しい条件</div>
+          <div class="badge ok">あると嬉しい</div>
           <ul>
-            <li><b>BBQスペース</b>（庭・テラス・BBQグリル）</li>
-            <li>洗濯機（赤ちゃん連れには助かる）</li>
+            <li><b>BBQスペース</b>（庭・テラス・グリル）</li>
+            <li>洗濯機（赤ん坊連れには助かる）</li>
             <li>Wi-Fi</li>
             <li>海が近い / オーシャンビュー</li>
-            <li>布団・寝具が人数分ある</li>
+            <li>周囲に家が少ない（騒音気にしなくていい）</li>
           </ul>
         </div>
       </div>
 
       <div class="divider"></div>
-      <div class="card">
-        <div class="badge">料金の目安（Airbnb一棟貸し・南房総エリア）</div>
-        <table>
-          <tr><th></th><th>平日泊</th><th>休前日・連休泊</th></tr>
-          <tr>
-            <td><b>1泊あたり（物件全体）</b></td>
-            <td class="mono">50,000〜80,000円</td>
-            <td class="mono">70,000〜120,000円</td>
-          </tr>
-          <tr>
-            <td><b>1人あたり（13人で割った場合）</b></td>
-            <td class="mono">約4,000〜6,200円</td>
-            <td class="mono">約5,400〜9,200円</td>
-          </tr>
-          <tr style="background:rgba(52,211,153,.06)">
-            <td><b>2泊合計 / 1人あたり</b></td>
-            <td class="mono"><b>約8,000〜12,400円</b></td>
-            <td class="mono"><b>約10,800〜18,400円</b></td>
-          </tr>
-        </table>
-        <p class="note">
-          ※南房総エリアの大人数対応（10名以上）一棟貸し物件の概算。物件により大きく異なる。<br/>
-          ※ペット可の物件は選択肢が絞られるため、早めの予約が重要。<br/>
-          ※清掃費・サービス料が別途かかる場合あり（Airbnb上で確認）。
-        </p>
+
+      <!-- Airbnb候補物件 -->
+      <h3 style="margin:14px 0 4px; font-size:18px;">宿泊候補（貸別荘・Airbnb）</h3>
+      <p style="margin-bottom:14px;">
+        10月10〜12日・13名前後で泊まれる候補を <b>1人あたり料金が安い順</b> に並べました。リンクから直接確認できます。<br/>
+        <span style="color:var(--warn)">※料金は2026年2月時点の参考価格。時期・空き状況で変動します。</span>
+      </p>
+
+      <div class="listing-grid" id="airbnb-listings">
+
+        <!-- ① Sea state -->
+        <div class="listing">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0">① Sea state 館山</h3>
+            <span class="mono" style="color:var(--ok); font-size:13px; font-weight:800;">1人 約15,000〜20,000円</span>
+          </div>
+          <p style="margin:4px 0 0; color:var(--muted); font-size:13px;">館山市塩見｜海まで徒歩0分・1日1組限定</p>
+          <div class="listing-meta">
+            <span class="listing-tag">Max 15名</span>
+            <span class="listing-tag bbq">BBQ無料（屋根付き）</span>
+            <span class="listing-tag">4LDK</span>
+            <span class="listing-tag">トイレ2つ</span>
+          </div>
+          <ul style="margin:6px 0 0 16px; font-size:13px;">
+            <li>目の前が海。<b>BBQ機材無料</b>（屋根付きで雨でもOK）</li>
+            <li>4LDK（和室+洋室3部屋）で大人数に対応</li>
+          </ul>
+          <a class="listing-link" href="https://uyamaresort.com/seastate/" target="_blank">公式サイト →</a>
+          <a class="listing-link" href="https://www.aco.co.jp/id/65102.html" target="_blank" style="margin-left:6px;">詳細・予約 →</a>
+        </div>
+
+        <!-- ② Casa Nautilus -->
+        <div class="listing">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0">② Casa Nautilus</h3>
+            <span class="mono" style="color:var(--ok); font-size:13px; font-weight:800;">1人 約15,000〜22,000円</span>
+          </div>
+          <p style="margin:4px 0 0; color:var(--muted); font-size:13px;">館山市相浜｜ビーチ徒歩1分・広い芝生庭</p>
+          <div class="listing-meta">
+            <span class="listing-tag">Max 15名</span>
+            <span class="listing-tag pet">ペット可（庭のみ）</span>
+            <span class="listing-tag bbq">BBQ可（3箇所・屋根付き）</span>
+          </div>
+          <ul style="margin:6px 0 0 16px; font-size:13px;">
+            <li>28畳のリビング + 3寝室。<b>芝生庭＆ドッグラン</b>付き</li>
+            <li>犬連れならここが第一候補。脱走防止対策済み</li>
+          </ul>
+          <a class="listing-link" href="https://www.casa-nautilus.com" target="_blank">公式サイト →</a>
+          <a class="listing-link" href="https://www.aco.co.jp/id/65577.html" target="_blank" style="margin-left:6px;">詳細・予約 →</a>
+        </div>
+
+        <!-- ③ パームビレッジ千倉 -->
+        <div class="listing">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0">③ パームビレッジ千倉</h3>
+            <span class="mono" style="color:var(--ok); font-size:13px; font-weight:800;">1人 約18,000〜25,000円</span>
+          </div>
+          <p style="margin:4px 0 0; color:var(--muted); font-size:13px;">南房総市千倉｜最大25名・貸切露天風呂</p>
+          <div class="listing-meta">
+            <span class="listing-tag">Max 25名</span>
+            <span class="listing-tag bbq">BBQ可</span>
+            <span class="listing-tag">露天風呂</span>
+            <span class="listing-tag">3棟利用可</span>
+          </div>
+          <ul style="margin:6px 0 0 16px; font-size:13px;">
+            <li>3棟合わせて<b>最大25名</b>。人数に余裕あり</li>
+            <li>予約制の<b>貸切露天風呂</b>でオーシャンビュー</li>
+          </ul>
+          <a class="listing-link" href="https://www.aco.co.jp/yado/dir/1/minamika/chiba/16/index.html" target="_blank">南房総の貸別荘一覧 →</a>
+        </div>
+
+        <!-- ④ サウナパラダイス富山 -->
+        <div class="listing">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0">④ サウナパラダイス富山</h3>
+            <span class="mono" style="color:var(--warn); font-size:13px; font-weight:800;">1人 約20,000〜25,000円</span>
+          </div>
+          <p style="margin:4px 0 0; color:var(--muted); font-size:13px;">南房総市平久里下｜サウナ・カラオケ・花火OK</p>
+          <div class="listing-meta">
+            <span class="listing-tag">Max 15名</span>
+            <span class="listing-tag bbq">BBQ可（屋根付き）</span>
+            <span class="listing-tag" style="background:rgba(248,113,113,.10); border-color:rgba(248,113,113,.25); color:#f87171;">🔥 サウナ付</span>
+            <span class="listing-tag">カラオケ</span>
+          </div>
+          <ul style="margin:6px 0 0 16px; font-size:13px;">
+            <li>HARVIA社製<b>バレルサウナ</b>＋水風呂完備</li>
+            <li>15人が囲めるダイニング。寝室3フロア</li>
+            <li>カラオケ＆花火OKで宴会向き</li>
+          </ul>
+          <a class="listing-link" href="https://www.aco.co.jp/id/67353.html" target="_blank">詳細・予約 →</a>
+        </div>
+
+        <!-- ⑤ デュエットリゾート ロータス -->
+        <div class="listing">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0">⑤ デュエットリゾート ロータス</h3>
+            <span class="mono" style="color:var(--warn); font-size:13px; font-weight:800;">1人 約23,500円</span>
+          </div>
+          <p style="margin:4px 0 0; color:var(--muted); font-size:13px;">館山市布沼｜Max 26名・カラオケ・卓球</p>
+          <div class="listing-meta">
+            <span class="listing-tag">Max 26名</span>
+            <span class="listing-tag pet">ペット可</span>
+            <span class="listing-tag bbq">BBQ可</span>
+            <span class="listing-tag" style="background:rgba(248,113,113,.10); border-color:rgba(248,113,113,.25); color:#f87171;">🔥 サウナ付</span>
+            <span class="listing-tag">カラオケ</span>
+          </div>
+          <ul style="margin:6px 0 0 16px; font-size:13px;">
+            <li>特定日: 85,800円(6名) + 追加9,600円/人</li>
+            <li>大島を見渡す絶景。<b>カラオケ・卓球・BBQ</b>で娯楽充実</li>
+            <li>26名までOKなので人数に余裕あり</li>
+          </ul>
+          <a class="listing-link" href="https://www.duetresort.com/en/tateyama-lotus" target="_blank">公式サイト →</a>
+          <a class="listing-link" href="https://www.cottagelife.jp/chiba/la122600/id65080.html" target="_blank" style="margin-left:6px;">予約 →</a>
+        </div>
+
+        <!-- ⑥ RE:VER北条 -->
+        <div class="listing">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0">⑥ RE:VER北条（リバー北条）</h3>
+            <span class="mono" style="color:var(--warn); font-size:13px; font-weight:800;">1人 約25,000円</span>
+          </div>
+          <p style="margin:4px 0 0; color:var(--muted); font-size:13px;">館山市北条｜館山駅徒歩圏・北条海水浴場100m</p>
+          <div class="listing-meta">
+            <span class="listing-tag">Max 15名</span>
+            <span class="listing-tag bbq">BBQ可</span>
+            <span class="listing-tag">4LDK</span>
+            <span class="listing-tag">2024年新築</span>
+          </div>
+          <ul style="margin:6px 0 0 16px; font-size:13px;">
+            <li>2024年3月オープンの<b>新築物件</b>。めちゃくちゃ綺麗</li>
+            <li>土曜: 80,000円(6名) + 追加10,000円/人 + 清掃費8,000円</li>
+            <li>13人2泊: <b>約33万円（税込）→ 1人あたり約25,000円</b></li>
+          </ul>
+          <a class="listing-link" href="https://rever-hojyo.com/" target="_blank">公式サイト →</a>
+          <a class="listing-link" href="https://www.jalan.net/yad329720/" target="_blank" style="margin-left:6px;">じゃらん →</a>
+        </div>
+
+        <!-- ⑦ デュエットリゾート アカシア -->
+        <div class="listing">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0">⑦ デュエットリゾート アカシア</h3>
+            <span class="mono" style="color:var(--warn); font-size:13px; font-weight:800;">1人 約25,000円</span>
+          </div>
+          <p style="margin:4px 0 0; color:var(--muted); font-size:13px;">館山市洲崎｜Max 26名・ジャグジー付き</p>
+          <div class="listing-meta">
+            <span class="listing-tag">Max 26名</span>
+            <span class="listing-tag pet">ペット可</span>
+            <span class="listing-tag bbq">BBQ可</span>
+            <span class="listing-tag" style="background:rgba(248,113,113,.10); border-color:rgba(248,113,113,.25); color:#f87171;">🔥 サウナ付</span>
+            <span class="listing-tag">ジャグジー</span>
+          </div>
+          <ul style="margin:6px 0 0 16px; font-size:13px;">
+            <li>特定日: 93,000円(6名) + 追加9,600円/人</li>
+            <li><b>40帖のリビング</b>から海絶景テラスが広がる。ドッグランあり</li>
+            <li>異国情緒溢れるモダンインテリア</li>
+          </ul>
+          <a class="listing-link" href="https://www.duetresort.com/en/tateyama-acacia" target="_blank">公式サイト →</a>
+          <a class="listing-link" href="https://www.cottagelife.jp/chiba/la122600/id64132.html" target="_blank" style="margin-left:6px;">予約 →</a>
+        </div>
+
+        <!-- ⑧ VILLA HALFMOON -->
+        <div class="listing">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0">⑧ VILLA HALFMOON</h3>
+            <span class="mono" style="color:var(--muted); font-size:13px; font-weight:800;">要見積もり</span>
+          </div>
+          <p style="margin:4px 0 0; color:var(--muted); font-size:13px;">館山市伊戸｜最大40名・6棟の複合施設</p>
+          <div class="listing-meta">
+            <span class="listing-tag">Max 40名</span>
+            <span class="listing-tag bbq">BBQ可（着火サービス付）</span>
+            <span class="listing-tag" style="background:rgba(248,113,113,.10); border-color:rgba(248,113,113,.25); color:#f87171;">🔥 サウナ付（4LDK棟）</span>
+            <span class="listing-tag">焚き火可</span>
+          </div>
+          <ul style="margin:6px 0 0 16px; font-size:13px;">
+            <li>4LDK×2棟 + 2LDK×4棟の複合施設。海徒歩1分</li>
+            <li>4LDK棟にサウナ付き。プールも前にある</li>
+            <li>貸切見積もりは問い合わせフォームから</li>
+          </ul>
+          <a class="listing-link" href="https://www.villahalfmoon.com/" target="_blank">公式サイト →</a>
+        </div>
+
+        <!-- ⑨ オーシャンリゾート Tハウス -->
+        <div class="listing">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0">⑨ オーシャンリゾート Tハウス</h3>
+            <span class="mono" style="color:var(--muted); font-size:13px; font-weight:800;">要確認</span>
+          </div>
+          <p style="margin:4px 0 0; color:var(--muted); font-size:13px;">館山市正木｜オーシャンビューサウナ・足湯</p>
+          <div class="listing-meta">
+            <span class="listing-tag">Max 13名</span>
+            <span class="listing-tag pet">ペット可</span>
+            <span class="listing-tag bbq">BBQ可</span>
+            <span class="listing-tag" style="background:rgba(248,113,113,.10); border-color:rgba(248,113,113,.25); color:#f87171;">🔥 サウナ付</span>
+            <span class="listing-tag">足湯付</span>
+          </div>
+          <ul style="margin:6px 0 0 16px; font-size:13px;">
+            <li><b>オーシャンビューバレルサウナ</b>で海を見ながら整う</li>
+            <li>足湯付きのテラス。ペットもOK</li>
+            <li>13名までなのでギリギリ。要人数確認</li>
+          </ul>
+          <a class="listing-link" href="https://cotte.fun/stay/445" target="_blank">詳細を見る →</a>
+        </div>
+
+        <!-- ⑩ オーシャンリゾート Aハウス -->
+        <div class="listing">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3 style="margin:0">⑩ オーシャンリゾート Aハウス</h3>
+            <span class="mono" style="color:var(--muted); font-size:13px; font-weight:800;">要確認（高め）</span>
+          </div>
+          <p style="margin:4px 0 0; color:var(--muted); font-size:13px;">館山市正木｜サウナ＆展望ジャグジー＆プール</p>
+          <div class="listing-meta">
+            <span class="listing-tag">Max 14名</span>
+            <span class="listing-tag pet">ペット可</span>
+            <span class="listing-tag bbq">BBQ可</span>
+            <span class="listing-tag" style="background:rgba(248,113,113,.10); border-color:rgba(248,113,113,.25); color:#f87171;">🔥 サウナ付</span>
+            <span class="listing-tag">ジャグジー</span>
+            <span class="listing-tag">プール</span>
+          </div>
+          <ul style="margin:6px 0 0 16px; font-size:13px;">
+            <li><b>バレルサウナ＋展望ジャグジー＋専用プール</b>の豪華物件</li>
+            <li>海まで30秒。設備は候補の中で最も充実</li>
+            <li>14名までなのでギリギリ。高めだが満足度は高い</li>
+          </ul>
+          <a class="listing-link" href="https://www.airbnb.jp/rooms/1141649340060753575" target="_blank">Airbnbで見る →</a>
+          <a class="listing-link" href="https://cotte.fun/stay/446" target="_blank" style="margin-left:6px;">詳細 →</a>
+        </div>
+
       </div>
 
       <div class="card" style="margin-top:14px;">
-        <div class="badge warn">赤ちゃん＆犬への配慮</div>
-        <ul>
-          <li><b>赤ちゃん</b>：段差が少ない / 和室（畳）があると安心 / ベビーゲート持参を検討</li>
-          <li><b>犬</b>：ペット可物件でも「小型犬のみ」等の制限あり。事前に確認必須</li>
-          <li>近隣住民への配慮（夜の騒音）→ 周囲に家が少ない物件が理想</li>
-        </ul>
+        <div class="badge">料金の目安（一棟貸し・南房総）</div>
+        <table>
+          <tr><th></th><th>3連休（10/10〜12）</th></tr>
+          <tr>
+            <td><b>1泊あたり（物件全体）</b></td>
+            <td class="mono">70,000〜120,000円</td>
+          </tr>
+          <tr style="background:rgba(52,211,153,.06)">
+            <td><b>2泊合計 / 1人あたり（13人割り）</b></td>
+            <td class="mono"><b>約10,800〜18,500円</b></td>
+          </tr>
+        </table>
+        <p class="note">
+          ※3連休価格。物件により大きく異なる。<br/>
+          ※清掃費・サービス料が別途かかる場合あり。
+        </p>
       </div>
     </section>
 
-    <!-- ===== ④ アクティビティ ===== -->
+    <!-- ===== ③ アクティビティ ===== -->
 
-    <section class="section" id="s4">
+    <section class="section" id="s3">
       <div class="secHead">
-        <h2>④ アクティビティ</h2>
-        <div class="page">4 / 10</div>
+        <h2>③ アクティビティ</h2>
+        <div class="page">3 / 9</div>
       </div>
       <p style="margin-bottom:12px;">
-        <b>12〜13人＋赤ちゃん2人＋犬</b>で楽しめるアクティビティ候補。
-        全員一緒に動けるものと、<b>チーム分け</b>が必要なものがあります。
+        全員で楽しめるものと、<b>チーム分け</b>が必要なもの。
       </p>
 
       <table>
-        <tr><th>アクティビティ</th><th>料金/人</th><th>所要時間</th><th>赤ちゃん</th><th>犬</th><th>備考</th></tr>
+        <tr><th>アクティビティ</th><th>料金/人</th><th>所要時間</th><th>赤ん坊</th><th>犬</th><th>備考</th></tr>
         <tr style="background:rgba(52,211,153,.06)">
           <td><b>⛳ ゴルフ</b></td>
           <td class="mono">8,000〜15,000円</td>
           <td>約5時間</td>
           <td>×</td>
           <td>×</td>
-          <td>★メインイベント候補。チーム分け必要</td>
+          <td>★メインイベント。チーム分け必要</td>
         </tr>
         <tr style="background:rgba(251,191,36,.06)">
           <td><b>🍖 BBQ</b></td>
@@ -437,7 +611,7 @@
           <td>自由</td>
           <td>○</td>
           <td>○</td>
-          <td>10月は泳げないが散歩・磯遊びは◎</td>
+          <td>10月は泳げないけど散歩・磯遊びは◎</td>
         </tr>
         <tr>
           <td><b>⛰️ 鋸山ハイキング</b></td>
@@ -445,15 +619,7 @@
           <td>2〜3時間</td>
           <td>△</td>
           <td>△</td>
-          <td>「地獄のぞき」絶景。抱っこ紐なら可</td>
-        </tr>
-        <tr>
-          <td><b>🍊 みかん狩り</b></td>
-          <td class="mono">400〜600円</td>
-          <td>約1時間</td>
-          <td>○</td>
-          <td>×</td>
-          <td>10月は早生みかんシーズン</td>
+          <td>「地獄のぞき」絶景。帰り道に寄るのもアリ</td>
         </tr>
         <tr>
           <td><b>🐬 鴨川シーワールド</b></td>
@@ -461,7 +627,7 @@
           <td>3〜4時間</td>
           <td>○</td>
           <td>×</td>
-          <td>雨天OK。赤ちゃん連れに人気</td>
+          <td>雨天OK。赤ん坊連れにも◎</td>
         </tr>
         <tr>
           <td><b>🌴 アロハガーデンたてやま</b></td>
@@ -479,30 +645,38 @@
           <td>○</td>
           <td>地元グルメ・お土産。ドライブがてら</td>
         </tr>
+        <tr style="background:rgba(248,113,113,.06)">
+          <td><b>🔥 テントサウナ</b></td>
+          <td class="mono">宿による</td>
+          <td>自由</td>
+          <td>×</td>
+          <td>×</td>
+          <td>サウナ付き物件なら追加費用なし。レンタルもあり</td>
+        </tr>
       </table>
 
       <div class="divider"></div>
       <div class="card">
-        <div class="badge ok">ゴルフ＆お留守番のチーム分け案</div>
-        <p>全員ゴルフできるが、<b>赤ちゃん2人の面倒を見る人</b>が必要。</p>
+        <div class="badge ok">ゴルフ組 vs のんびり組</div>
+        <p>全員ゴルフできるけど、<b>赤ん坊の面倒</b>を見る人が必要。</p>
         <ul>
           <li><b>ゴルフ組</b>（6〜8人）→ 朝から近隣ゴルフ場へ</li>
-          <li><b>のんびり組</b>（4〜5人＋赤ちゃん＋犬）→ 宿でゆっくり / 海辺散歩 / みかん狩り / 買い出し</li>
-          <li>夕方に合流して <b>みんなでBBQ＆宴会</b></li>
+          <li><b>のんびり組</b>（残り＋赤ん坊＋犬）→ 宿でゆっくり / 海辺散歩 / 買い出し</li>
+          <li>夕方に合流 → <b>みんなでBBQ＆宴会</b></li>
         </ul>
-        <p class="note">※ゴルフ組とのんびり組は日替わりローテーションも可。2日目にメンバー入れ替え。</p>
+        <p class="note">※メンバーは日替わりローテーションでもOK。</p>
       </div>
     </section>
 
-    <!-- ===== ⑤ ゴルフ場候補 ===== -->
+    <!-- ===== ④ ゴルフ場候補 ===== -->
 
-    <section class="section" id="s5">
+    <section class="section" id="s4">
       <div class="secHead">
-        <h2>⑤ ゴルフ場候補</h2>
-        <div class="page">5 / 10</div>
+        <h2>④ ゴルフ場候補</h2>
+        <div class="page">4 / 9</div>
       </div>
       <p style="margin-bottom:12px;">
-        南房総エリアのゴルフ場候補。<b>ビジター利用可・6〜8人</b>で回れるところを選定。
+        南房総エリアのゴルフ場。<b>ビジター利用可・18ホール（フルコース）</b>の料金。
       </p>
       <table>
         <tr>
@@ -515,62 +689,62 @@
           <td><b>館山カントリークラブ</b></td>
           <td class="mono">車20〜30分</td>
           <td class="mono">8,000〜12,000円</td>
-          <td>海が見えるコース。館山エリアで最もアクセス良好</td>
+          <td>海が見えるコース。アクセス良好</td>
         </tr>
         <tr>
           <td><b>鋸南カントリークラブ</b></td>
           <td class="mono">車30〜40分</td>
           <td class="mono">7,000〜11,000円</td>
-          <td>山間の自然豊かなコース。比較的リーズナブル</td>
+          <td>山間の自然豊かなコース。比較的安い</td>
         </tr>
         <tr>
-          <td><b>南房総カントリー<br/>クラブ</b></td>
+          <td><b>南房総カントリークラブ</b></td>
           <td class="mono">車20〜30分</td>
           <td class="mono">8,000〜13,000円</td>
           <td>丘陵コースで眺望◎</td>
         </tr>
         <tr>
-          <td><b>鴨川カントリー<br/>クラブ</b></td>
+          <td><b>鴨川カントリークラブ</b></td>
           <td class="mono">車40〜50分</td>
           <td class="mono">9,000〜15,000円</td>
           <td>太平洋を望むシーサイドコース。やや遠いが景色◎</td>
         </tr>
       </table>
       <p class="note">
-        ※料金は10月の土日ビジター・セルフプレー・昼食別の目安。平日はさらに安い。<br/>
-        ※6〜8人の場合は2〜3組になるため、スタート時間の枠確保が重要。<b>早めの予約推奨</b>。<br/>
-        ※2026年2月時点の参考価格。最新料金は楽天GORA・GDO等で確認してください。
+        ※料金は3連休・ビジター・セルフプレー（18H）・昼食別の目安。<br/>
+        ※6〜8人 = 2〜3組なので、スタート枠の確保が重要。<b>早めの予約推奨</b>。<br/>
+        ※2026年2月時点の参考価格。最新は楽天GORA・GDO等で確認。
       </p>
     </section>
 
-    <!-- ===== ⑥ 買い出し＆自炊計画 ===== -->
+    <!-- ===== ⑤ 買い出し＆自炊 ===== -->
 
-    <section class="section" id="s6">
+    <section class="section" id="s5">
       <div class="secHead">
-        <h2>⑥ 買い出し＆自炊計画</h2>
-        <div class="page">6 / 10</div>
+        <h2>⑤ 買い出し＆自炊計画</h2>
+        <div class="page">5 / 9</div>
       </div>
       <p style="margin-bottom:12px;">
-        到着後は<b>全食自炊＆BBQ</b>。13人分の食材・酒を調達する戦略です。
+        到着後は<b>全食自炊＆BBQ</b>。13人分の食材・酒の調達戦略。
       </p>
 
       <div class="grid">
         <div class="card">
-          <div class="badge a">事前に都内で買うもの</div>
+          <div class="badge a">事前に都内で買う</div>
           <ul>
-            <li>🍖 肉類（コストコ / 業務スーパーで大量購入）</li>
-            <li>🍺 酒類（箱買い → 車に積むor宿に事前配送）</li>
-            <li>🧂 調味料・油・ラップ・ゴミ袋等</li>
+            <li>🍖 肉類（コストコ / 業務スーパーで大量に）</li>
+            <li>🍺 酒（箱買い → 車に積むor宿に事前配送）</li>
+            <li>🧂 調味料・油・ラップ・ゴミ袋</li>
             <li>🔥 BBQ用の炭・着火剤</li>
-            <li>🍚 米（5kg×2〜3袋。宿に事前配送もアリ）</li>
+            <li>🍚 米（宿に事前配送もアリ）</li>
           </ul>
         </div>
         <div class="card">
-          <div class="badge ok">現地で買うもの</div>
+          <div class="badge ok">現地で買う</div>
           <ul>
             <li>🐟 地魚・海鮮（刺身・BBQ用）</li>
-            <li>🥬 地元野菜・果物</li>
-            <li>🧊 氷（クーラーボックス用）</li>
+            <li>🥬 地元野菜</li>
+            <li>🧊 氷</li>
             <li>🥤 追加の飲み物</li>
           </ul>
         </div>
@@ -580,7 +754,7 @@
       <div class="card">
         <div class="badge">現地の買い出しスポット</div>
         <table>
-          <tr><th>店舗</th><th>特徴</th><th>おすすめ用途</th></tr>
+          <tr><th>店舗</th><th>特徴</th><th>用途</th></tr>
           <tr>
             <td><b>おどや（館山バイパス店）</b></td>
             <td>地元チェーン。地魚コーナー充実。駐車場広い</td>
@@ -588,94 +762,92 @@
           </tr>
           <tr>
             <td><b>イオンタウン館山</b></td>
-            <td>大型商業施設。食品〜日用品〜100均まで一括</td>
+            <td>大型商業施設。食品〜日用品〜100均まで</td>
             <td>足りないもの全般</td>
           </tr>
           <tr>
-            <td><b>渚の駅たてやま<br/>（海のマルシェ）</b></td>
-            <td>地魚の刺身・干物の直売。観光も兼ねて</td>
-            <td>海鮮の追加調達</td>
+            <td><b>渚の駅たてやま</b></td>
+            <td>地魚の刺身・干物の直売</td>
+            <td>海鮮の追加</td>
           </tr>
           <tr>
             <td><b>道の駅 富楽里とみやま</b></td>
             <td>高速直結。地元野菜・鮮魚・総菜</td>
-            <td>道中の寄り道買い出し</td>
+            <td>道中に寄る</td>
           </tr>
           <tr>
             <td><b>カインズ 館山店</b></td>
-            <td>ホームセンター。BBQ用品・アウトドア用品</td>
-            <td>炭・着火剤・紙皿等</td>
+            <td>ホームセンター</td>
+            <td>炭・着火剤・紙皿</td>
           </tr>
         </table>
       </div>
 
       <div class="highlight-box">
-        <b>💡 10月の南房総は伊勢海老の旬！</b><br/>
-        漁期は8月〜翌5月。10月はまさに走りの時期。漁港直売所や「渚の駅」で手に入る可能性あり。
-        BBQで焼くもよし、刺身で食べるもよし。地元の贅沢を楽しもう。
+        <b>🦐 10月の南房総は伊勢海老の旬！</b><br/>
+        漁港直売所や「渚の駅」で手に入る可能性あり。BBQで焼くもよし、刺身で食べるもよし。
       </div>
 
       <p class="note">
-        ※おどや等の閉店は21時頃。南房総は都心より閉店が早いので、到着が遅くなる場合は<b>道中のイオンモール木更津</b>（アクアライン直後）での買い出しも検討。<br/>
-        ※漁港直売所は<b>朝8:00〜昼前まで</b>が勝負。午後は売り切れの場合あり。
+        ※南房総は閉店が早い（21時頃）。到着が遅くなる場合は<b>道中のイオンモール木更津</b>（アクアライン直後）で。<br/>
+        ※漁港直売所は<b>朝8:00〜昼前</b>が勝負。午後は売り切れ。
       </p>
     </section>
 
-    <!-- ===== ⑦ タイムライン ===== -->
+    <!-- ===== ⑥ タイムライン ===== -->
 
-    <section class="section" id="s7">
+    <section class="section" id="s6">
       <div class="secHead">
-        <h2>⑦ タイムライン（2泊3日）</h2>
-        <div class="page">7 / 10</div>
+        <h2>⑥ タイムライン（2泊3日）</h2>
+        <div class="page">6 / 9</div>
       </div>
 
-      <div class="badge a" style="margin-bottom:8px">基本プラン</div>
       <div class="tl-grid">
         <div class="tl-day">
-          <div class="tl-head">Day1<br/><small>移動＆BBQ</small></div>
+          <div class="tl-head">Day1 — 10/10（土）<br/><small>移動＆BBQ</small></div>
           <div class="tl-ev mv">
             <div class="tl-t">07:00〜08:00</div>
             🚗 各拠点を出発<br/>
-            <small>東京組 → 海ほたるで合流<br/>名古屋組 → 木更津JCTで合流<br/>柏組 → 市原SAで全員合流</small>
+            <small>海ほたる → 市原SAで合流</small>
           </div>
           <div class="tl-ev fun">
             <div class="tl-t">10:00〜11:00</div>
-            🍽️ 道中で昼食（SA or 道の駅）<br/>
-            <small>道の駅 富楽里とみやま etc</small>
+            🍽️ 道中で昼食<br/>
+            <small>道の駅 or SA</small>
           </div>
           <div class="tl-ev mv">
             <div class="tl-t">11:30〜12:30</div>
-            🛒 <b>買い出し</b>（おどや / イオン）<br/>
-            <small>海鮮・野菜・足りないもの</small>
+            🛒 <b>買い出し</b><br/>
+            <small>おどや / イオン</small>
           </div>
           <div class="tl-ev act">
-            <div class="tl-t">13:00〜14:00</div>
-            🏠 Airbnbチェックイン<br/>
+            <div class="tl-t">13:00</div>
+            🏠 チェックイン<br/>
             <small>荷物搬入・部屋割り</small>
           </div>
           <div class="tl-ev free">
             <div class="tl-t">14:00〜17:00</div>
-            🏖️ 海辺散歩 / 周辺散策<br/>
-            <small>赤ちゃん＆犬と一緒に</small>
+            🏖️ 海辺散歩 / まったり<br/>
+            <small>赤ん坊＆犬と一緒に</small>
           </div>
           <div class="tl-ev rest">
             <div class="tl-t">17:00〜</div>
             🍖 <b>BBQ＆宴会</b><br/>
-            🍺 みんなで自炊＆飲み
+            🍺🚬 飲んで吸って騒ぐ
           </div>
         </div>
 
         <div class="tl-day">
-          <div class="tl-head">Day2<br/><small>ゴルフ＆自由行動</small></div>
+          <div class="tl-head">Day2 — 10/11（日）<br/><small>ゴルフ＆自由行動</small></div>
           <div class="tl-ev act">
             <div class="tl-t">07:00〜07:30</div>
             ⛳ <b>ゴルフ組出発</b>（6〜8人）<br/>
-            <small>近隣ゴルフ場へ車で移動</small>
+            <small>近隣ゴルフ場へ</small>
           </div>
           <div class="tl-ev fun">
             <div class="tl-t">09:00〜</div>
             🏖️ <b>のんびり組</b><br/>
-            <small>朝はゆっくり → 海散歩<br/>みかん狩り / 道の駅巡り<br/>アロハガーデン etc</small>
+            <small>朝はゆっくり → 海散歩<br/>道の駅巡り etc</small>
           </div>
           <div class="tl-ev mv">
             <div class="tl-t">14:00〜15:00</div>
@@ -684,104 +856,92 @@
           </div>
           <div class="tl-ev free">
             <div class="tl-t">15:00〜17:00</div>
-            🏖️ 全員合流・フリータイム<br/>
-            <small>海辺でまったり / 温泉</small>
+            🏖️ 全員合流・フリータイム
           </div>
           <div class="tl-ev rest">
             <div class="tl-t">17:00〜</div>
             🍳 <b>自炊＆宴会 Night2</b><br/>
-            🍺 海鮮鍋？伊勢海老？<br/>
-            <small>みんなで料理＆飲み</small>
+            🦐 伊勢海老？海鮮鍋？<br/>
+            🍺🚬 最後の夜を満喫
           </div>
         </div>
 
         <div class="tl-day">
-          <div class="tl-head">Day3<br/><small>片付け＆帰路</small></div>
+          <div class="tl-head">Day3 — 10/12（月祝）<br/><small>片付け＆帰路</small></div>
           <div class="tl-ev rest">
             <div class="tl-t">08:00〜09:00</div>
             🍳 朝食（残り食材で）<br/>
             <small>片付け・掃除・ゴミ処理</small>
           </div>
           <div class="tl-ev act">
-            <div class="tl-t">10:00〜11:00</div>
+            <div class="tl-t">10:00</div>
             🏠 チェックアウト
           </div>
           <div class="tl-ev fun">
-            <div class="tl-t">11:00〜13:00</div>
+            <div class="tl-t">10:30〜12:30</div>
             🛍️ 帰り道に寄り道<br/>
-            <small>道の駅でお土産 / ランチ<br/>渚の駅たてやま / 鋸山</small>
+            <small>道の駅でお土産 / ランチ<br/>鋸山とか</small>
           </div>
           <div class="tl-ev mv">
-            <div class="tl-t">13:00〜14:00</div>
+            <div class="tl-t">13:00</div>
             🚗 帰路出発<br/>
-            <small>⚠️ 14時までにアクアラインへ<br/>（遅れると大渋滞）</small>
+            <small>⚠️ 14時までにアクアライン！</small>
           </div>
           <div class="tl-ev mv">
             <div class="tl-t">15:00〜16:00</div>
-            🏠 各拠点に帰宅<br/>
-            <small>名古屋組は+3時間</small>
+            🏠 帰宅
           </div>
         </div>
       </div>
 
       <p class="note">
-        ※時刻はあくまで目安。天候や渋滞で柔軟に調整。<br/>
-        ※ゴルフ組とのんびり組のメンバーはDay2の朝に最終決定でOK。<br/>
-        ※名古屋組の帰りは距離があるため、最終日は早めの出発を検討。
+        ※時刻はあくまで目安。天候・渋滞で柔軟に。<br/>
+        ※ゴルフ組のメンバーはDay2の朝に最終決定でOK。
       </p>
     </section>
 
-    <!-- ===== ⑧ 費用概算 ===== -->
+    <!-- ===== ⑦ 費用概算 ===== -->
 
-    <section class="section" id="s8">
+    <section class="section" id="s7">
       <div class="secHead">
-        <h2>⑧ 費用概算（1人あたり）</h2>
-        <div class="page">8 / 10</div>
+        <h2>⑦ 費用概算（1人あたり）</h2>
+        <div class="page">7 / 9</div>
       </div>
 
       <div class="grid">
         <div class="card">
-          <div class="badge ok">固定費（1人あたり）</div>
+          <div class="badge ok">固定費</div>
           <table>
-            <tr><th>項目</th><th>平日泊</th><th>連休泊</th></tr>
+            <tr><th>項目</th><th>1人あたり</th></tr>
             <tr>
-              <td><b>Airbnb 2泊</b></td>
-              <td class="mono">8,000〜12,000円</td>
-              <td class="mono">11,000〜18,000円</td>
+              <td><b>Airbnb 2泊</b><br/><small style="color:var(--muted)">13人で割り勘</small></td>
+              <td class="mono">11,000〜18,500円</td>
             </tr>
             <tr>
-              <td><b>高速代（往復）</b><br/><small>※東京組の場合</small></td>
-              <td class="mono" colspan="2">約6,000〜7,000円<br/><small>（車割り勘で1人2,000〜2,500円）</small></td>
+              <td><b>高速代＋ガソリン（往復）</b><br/><small style="color:var(--muted)">車割り勘</small></td>
+              <td class="mono">約2,500〜4,000円</td>
             </tr>
             <tr>
-              <td><b>ガソリン代（往復）</b><br/><small>※車割り勘</small></td>
-              <td class="mono" colspan="2">約1,000〜1,500円</td>
-            </tr>
-            <tr>
-              <td><b>ゴルフ（希望者）</b></td>
-              <td class="mono" colspan="2">8,000〜15,000円</td>
+              <td><b>ゴルフ（希望者のみ）</b></td>
+              <td class="mono">8,000〜15,000円</td>
             </tr>
           </table>
         </div>
         <div class="card">
-          <div class="badge warn">変動費（1人あたり目安）</div>
+          <div class="badge warn">変動費</div>
           <table>
-            <tr><th>項目</th><th>目安</th></tr>
+            <tr><th>項目</th><th>1人あたり</th></tr>
             <tr>
-              <td><b>食材・BBQ材料</b><br/><small>2泊3日分（割り勘）</small></td>
+              <td><b>食材・BBQ材料</b><br/><small style="color:var(--muted)">2泊3日分・割り勘</small></td>
               <td class="mono">5,000〜8,000円</td>
             </tr>
             <tr>
-              <td><b>酒代</b><br/><small>（割り勘）</small></td>
+              <td><b>酒代</b><br/><small style="color:var(--muted)">割り勘</small></td>
               <td class="mono">3,000〜5,000円</td>
             </tr>
             <tr>
               <td><b>道中の外食</b></td>
               <td class="mono">1,000〜2,000円</td>
-            </tr>
-            <tr>
-              <td><b>お土産等</b></td>
-              <td class="mono">各自</td>
             </tr>
           </table>
         </div>
@@ -789,61 +949,55 @@
 
       <div class="divider"></div>
       <div class="card">
-        <div class="badge a">1人あたり総額の目安</div>
+        <div class="badge a" style="font-size:14px;">1人あたり合計</div>
         <table>
           <tr>
             <th></th>
             <th>ゴルフする人</th>
             <th>ゴルフしない人</th>
           </tr>
-          <tr>
-            <td><b>平日泊パターン</b><br/><small>（3連休を外す）</small></td>
-            <td class="mono"><b>約25,000〜35,000円</b></td>
-            <td class="mono"><b>約17,000〜25,000円</b></td>
-          </tr>
-          <tr>
-            <td><b>連休泊パターン</b><br/><small>（10/10〜12利用）</small></td>
-            <td class="mono"><b>約30,000〜45,000円</b></td>
-            <td class="mono"><b>約22,000〜30,000円</b></td>
+          <tr style="background:rgba(52,211,153,.06)">
+            <td><b>合計目安</b></td>
+            <td class="mono"><b>約3.0〜4.5万円</b></td>
+            <td class="mono"><b>約2.2〜3.5万円</b></td>
           </tr>
         </table>
         <p class="note">
-          ※高速代・ガソリン代は同乗者で割り勘した想定。名古屋組は別途高速代が高くなる。<br/>
-          ※食材・酒は全員で均等割り想定。<br/>
-          ※赤ちゃんは基本無料（Airbnb・食事とも）。犬はペット料金が別途かかる場合あり。
+          ※高速代・ガソリン代は同乗者で割り勘想定。<br/>
+          ※食材・酒は全員均等割り。赤ん坊は基本無料。<br/>
+          ※2026年2月時点の概算。Airbnb物件確定後に精緻化。
         </p>
       </div>
     </section>
 
-    <!-- ===== ⑨ 季節リスク ===== -->
+    <!-- ===== ⑧ 季節リスク ===== -->
 
-    <section class="section" id="s9">
+    <section class="section" id="s8">
       <div class="secHead">
-        <h2>⑨ 季節リスク＆天候対策</h2>
-        <div class="page">9 / 10</div>
+        <h2>⑧ 季節リスク＆天候対策</h2>
+        <div class="page">8 / 9</div>
       </div>
       <p style="margin-bottom:12px;">
-        <b>10月の南房総</b>は秋の行楽シーズン。気候は穏やかだが、台風・秋雨のリスクもある時期。
+        <b>10月上旬の南房総。</b>基本的には過ごしやすい。ただし台風・秋雨は注意。
       </p>
       <div class="grid">
         <div class="card">
           <div class="badge ok">メリット</div>
           <ul>
-            <li>気温 <b>最高22〜23°C / 最低14〜16°C</b> で過ごしやすい</li>
-            <li><b>伊勢海老</b>の旬（8月〜翌5月）。南房総伊勢海老まつり開催期間</li>
+            <li>気温 <b>最高22〜23°C / 最低14〜16°C</b></li>
+            <li><b>伊勢海老</b>の旬。南房総伊勢海老まつり開催中</li>
             <li>新豆の<b>落花生</b>（千葉名産）が旬</li>
-            <li>夏の混雑が落ち着き、宿泊料金も夏よりリーズナブル</li>
             <li>BBQ・ハイキングに<b>最適な気候</b></li>
           </ul>
         </div>
         <div class="card">
-          <div class="badge warn">デメリット・リスク</div>
+          <div class="badge warn">リスク</div>
           <ul>
-            <li>10月上旬は<b>台風シーズン終盤</b>。接近リスクあり</li>
-            <li><b>秋雨前線</b>の影響でぐずつく日も</li>
-            <li>海水浴場は<b>閉鎖済み</b>（泳ぐなら自己責任）</li>
-            <li>日没が<b>17時前後</b>と早い。夕方の活動は早めに</li>
-            <li>3連休は<b>アクアライン大渋滞</b></li>
+            <li>10月上旬は<b>台風シーズン終盤</b></li>
+            <li><b>秋雨前線</b>でぐずつく日も</li>
+            <li>海水浴場は<b>閉鎖済み</b></li>
+            <li>日没 <b>17時前後</b>。夕方は早めに</li>
+            <li>3連休で<b>アクアライン大渋滞</b></li>
           </ul>
         </div>
       </div>
@@ -851,116 +1005,95 @@
       <div class="card" style="margin-top:14px;">
         <div class="badge b">Plan B（雨天時）</div>
         <ul>
-          <li><b>🐬 鴨川シーワールド</b>（車40〜50分）：雨天OK・赤ちゃんも楽しめる</li>
-          <li><b>🌴 アロハガーデンたてやま</b>：温室なので雨でも◎。ペットも入場可</li>
-          <li><b>♨️ 日帰り温泉</b>：南房総には温泉施設多数（例: 里見の湯、海辺の湯）</li>
-          <li><b>🏠 宿でまったり</b>：ボードゲーム・映画・自炊を楽しむ ← 大人数なら意外と楽しい</li>
+          <li><b>🐬 鴨川シーワールド</b>（車40〜50分）：赤ん坊もOK</li>
+          <li><b>🌴 アロハガーデンたてやま</b>：温室で雨でも◎。ペットOK</li>
+          <li><b>♨️ 日帰り温泉</b>：南房総に多数あり</li>
+          <li><b>🏠 宿でまったり</b>：ボードゲーム・飲み会 ← 大人数なら意外と楽しい</li>
         </ul>
-        <p class="note">※台風が直撃する場合は日程延期を検討。1週間前から天気予報を要チェック。</p>
       </div>
 
       <div class="card" style="margin-top:10px;">
-        <div class="badge">10月の服装</div>
+        <div class="badge">服装</div>
         <ul>
-          <li>日中：半袖〜薄手の長袖でOK</li>
-          <li>朝晩：<b>パーカー・カーディガン必須</b>（特にBBQ時の夜は冷える）</li>
-          <li>赤ちゃん：重ね着で調整。ブランケット持参推奨</li>
+          <li>日中：半袖〜薄手の長袖</li>
+          <li>朝晩：<b>パーカー必須</b>（BBQ時の夜は冷える）</li>
+          <li>赤ん坊：重ね着で調整。ブランケット持参</li>
         </ul>
       </div>
     </section>
 
-    <!-- ===== ⑩ 最終まとめ ===== -->
+    <!-- ===== ⑨ まとめ ===== -->
 
-    <section class="section" id="s10">
+    <section class="section" id="s9">
       <div class="secHead">
-        <h2>⑩ 予約スケジュール＆まとめ</h2>
-        <div class="page">10 / 10</div>
+        <h2>⑨ 予約スケジュール＆まとめ</h2>
+        <div class="page">9 / 9</div>
       </div>
       <p style="margin-bottom:12px;">
-        <b>10月出発</b>に向けて、いつまでに何を決めるかの逆算スケジュール。
+        <b>10/10出発</b>に向けた逆算スケジュール。
       </p>
       <table>
         <tr><th>時期</th><th>やること</th><th>備考</th></tr>
         <tr>
           <td><b>3〜4月</b><br/><small style="color:var(--muted)">6ヶ月前</small></td>
-          <td>📅 <b>日程確定＆参加者確定</b></td>
-          <td>3連休 or 別日程を決定。頭数が固まらないとAirbnbが選べない</td>
+          <td>📅 <b>参加者確定</b></td>
+          <td>頭数が決まらないとAirbnbが選べない</td>
         </tr>
         <tr>
           <td><b>5〜6月</b><br/><small style="color:var(--muted)">4ヶ月前</small></td>
           <td>🏠 <b>Airbnb予約</b></td>
-          <td>大人数・ペット可の物件は少ないため早めに確保。キャンセルポリシーが柔軟な物件を選ぶ</td>
+          <td>大人数＋ペット可は少ないので早めに。キャンセルポリシー柔軟な物件を</td>
         </tr>
         <tr>
           <td><b>7〜8月</b><br/><small style="color:var(--muted)">2ヶ月前</small></td>
           <td>⛳ <b>ゴルフ場予約</b></td>
-          <td>10月の土日は人気。2〜3組分の枠を早めに確保</td>
+          <td>3連休は人気。2〜3組分の枠を確保</td>
         </tr>
         <tr>
           <td><b>9月</b><br/><small style="color:var(--muted)">1ヶ月前</small></td>
-          <td>🚗 <b>車の配車・乗り合わせ決定</b><br/>🛒 <b>買い出しリスト作成</b></td>
-          <td>誰がどの車に乗るか、チャイルドシート手配</td>
+          <td>🚗 <b>車の配車・乗り合わせ</b><br/>🛒 <b>買い出しリスト</b></td>
+          <td>チャイルドシート手配も忘れずに</td>
         </tr>
         <tr>
-          <td><b>10月上旬</b><br/><small style="color:var(--muted)">1〜2週間前</small></td>
-          <td>🌤️ <b>天気予報チェック</b><br/>📝 <b>最終確認</b></td>
-          <td>台風情報の確認。必要に応じてPlan B発動</td>
+          <td><b>10月上旬</b><br/><small style="color:var(--muted)">直前</small></td>
+          <td>🌤️ <b>天気予報チェック</b></td>
+          <td>台風来たらPlan B発動</td>
         </tr>
       </table>
 
       <div class="divider"></div>
       <div class="card">
-        <div class="badge warn">キャンセルポリシー（目安）</div>
+        <div class="badge warn">キャンセルポリシー</div>
         <table>
-          <tr><th>項目</th><th>キャンセル料発生</th><th>備考</th></tr>
-          <tr><td><b>Airbnb</b></td><td>物件による（柔軟〜厳格まで）</td><td>予約時にポリシーを必ず確認。「柔軟」なら48時間前まで全額返金</td></tr>
-          <tr><td><b>ゴルフ場</b></td><td>前日〜当日: キャンセルフィー</td><td>施設により異なる。要確認</td></tr>
+          <tr><th>項目</th><th>キャンセル料</th><th>備考</th></tr>
+          <tr><td><b>Airbnb</b></td><td>物件による</td><td>「柔軟」なら48時間前まで全額返金</td></tr>
+          <tr><td><b>ゴルフ場</b></td><td>前日〜当日</td><td>施設により異なる</td></tr>
         </table>
-      </div>
-
-      <div class="card" style="margin-top:10px;">
-        <div class="badge">人数変動の影響</div>
-        <ul>
-          <li><b>Airbnb</b>：人数が減ると1人あたり負担が増える。逆に増えると安くなる</li>
-          <li><b>ゴルフ</b>：人数変更は比較的柔軟（組数の増減で調整）</li>
-          <li><b>食材・酒</b>：割り勘なので人数変動の影響は少ない</li>
-          <li><b>車</b>：人数減→車の台数が減る→高速代負担が変わる</li>
-        </ul>
       </div>
 
       <div class="divider"></div>
       <div class="card">
-        <div class="badge a" style="font-size:14px;">最終まとめ：1人あたり費用の目安</div>
+        <div class="badge a" style="font-size:14px;">1人あたり合計（再掲）</div>
         <table>
           <tr>
             <th></th>
-            <th>ゴルフあり</th>
-            <th>ゴルフなし</th>
+            <th>ゴルフする人</th>
+            <th>ゴルフしない人</th>
           </tr>
-          <tr>
-            <td><b>平日泊</b><br/><small style="color:var(--muted)">3連休を外す</small></td>
-            <td class="mono"><b>約2.5〜3.5万円</b></td>
-            <td class="mono"><b>約1.7〜2.5万円</b></td>
-          </tr>
-          <tr>
-            <td><b>連休泊</b><br/><small style="color:var(--muted)">10/10〜12</small></td>
+          <tr style="background:rgba(52,211,153,.06)">
+            <td><b>合計</b></td>
             <td class="mono"><b>約3.0〜4.5万円</b></td>
-            <td class="mono"><b>約2.2〜3.0万円</b></td>
+            <td class="mono"><b>約2.2〜3.5万円</b></td>
           </tr>
         </table>
-        <p class="note">
-          ※固定費（宿＋交通）＋変動費（食材・酒・外食）込の概算。<br/>
-          ※名古屋組は高速代が+3,000〜5,000円/人（車割り勘）。<br/>
-          ※2026年2月時点の概算です。Airbnb物件の選定後に精緻化します。
-        </p>
       </div>
 
       <div class="highlight-box" style="margin-top:14px;">
         <b>📋 次のアクション：</b><br/>
-        ① メンバーに日程の候補を共有 → <b>3連休 or 別日程</b>を多数決<br/>
-        ② 犬を連れてくるか先輩に確認 → <b>ペット可物件の要否</b>を確定<br/>
-        ③ Airbnbで物件リサーチ開始 → <b>候補を2〜3件に絞る</b><br/>
-        ④ このスライドをブラッシュアップ → <b>物件・日程確定後に詳細版を作成</b>
+        ① メンバーに参加確認を取る<br/>
+        ② 犬を連れてくるか確認 → <b>ペット可物件の要否</b>を確定<br/>
+        ③ Airbnbの候補を見て、みんなで物件を決める<br/>
+        ④ 物件確定後にこのスライドをアップデート
       </div>
     </section>
 
